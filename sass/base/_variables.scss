@@ -1,0 +1,87 @@
+
+
+// -- units
+
+$base-unit: 12px;
+
+@function u($n) {
+    @return $n * $base-unit;
+}
+
+
+// -- colours
+
+
+$color-heading: #00142E;
+$color-heading-light: #E8E8E8;
+
+$color-body: #9CA4AA;
+$color-border: #DEDEDE;
+$color-white: #FFFFFF;
+$color-black: #000000;
+
+$color-bg: #F9F9F9;
+
+
+
+
+// -- layout
+
+$layout-gutter: u(2);
+
+
+
+// -- screen sizes
+
+$screen-small: 480px;
+$screen-medium: 769px;
+$screen-large: 1024px;
+$screen-huge: 1960px;
+
+
+
+// -- page width
+
+$page-width: 1200px;
+
+
+
+
+// -- typography
+
+$body-font: 'Avenir', 'Helvetica Neue', Arial, sans-serif;
+
+
+$font-small: 14px;
+$font-base: 22px;
+$font-medium: 30px;
+$font-large: 40px;
+$font-super: 70px;
+
+// -- line height
+
+$type-height-base: 1.4;
+
+$type-height-large: 1.3;
+$type-height-medium: 1.2;
+$type-height-small: 1.1;
+
+$type-weight-regular: 400;
+$type-weight-bold: 900;
+$type-weight-light: 300;
+
+
+
+
+// -- bordewr radius
+
+$border-radius: 2px;
+
+
+
+
+// -- 100% vertical height
+
+$site-height: 100vh;
+
+

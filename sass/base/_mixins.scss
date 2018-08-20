@@ -1,0 +1,67 @@
+@mixin vendor-prefix($name, $value) {
+  @each $vendor in (‘-webkit-‘, ‘-moz-‘, ‘-ms-‘, ‘-o-‘, ‘’) {
+    #{$vendor}#{$name}: #{$value};
+  }
+}
+
+
+@mixin page-width {
+	@extend .page-width;
+}
+
+
+@mixin text-background-wrap($r, $g, $b, $opacity) {
+	display: inline;
+	background: rgba($r, $g, $b, $opacity);
+	border-radius: 2px;
+	padding-left: 2%;
+	padding-right: 2%;
+	-webkit-box-decoration-break: clone;
+	-ms-box-decoration-break: clone;
+	-o-box-decoration-break: clone;
+	-webkit-box-decoration-break: clone;
+}
+
+
+@mixin hero-font {
+	    font-size: $font-medium;
+	    color: $color-heading-light;
+	    font-weight: $type-weight-bold;
+	    line-height: $type-height-large;
+	    margin-bottom: u(2);
+
+	    .title-wrapper {
+	    	@include text-background-wrap(255, 255, 255, 0.8);
+	    }
+
+	    .underline {
+	    	position: relative;
+
+	    	&:after {
+				position: absolute;
+				content: '';
+				height: 3px;
+				bottom: 5px;
+				left: 0;
+				right: 0;
+				width: 97%;
+				margin: 0 auto;
+				background: $color-heading-light;
+	    	}
+	    }
+
+	    .dark {
+	    	color: $color-heading;
+	    }
+
+	@media (min-width: $screen-medium) {
+	        font-size: $font-super;
+
+        .underline {
+        	&:after {
+				height: 5px;
+				bottom: 13px;
+			}
+        }
+	}
+}
